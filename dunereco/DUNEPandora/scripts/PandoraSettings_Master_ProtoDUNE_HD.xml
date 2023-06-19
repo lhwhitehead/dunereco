@@ -19,7 +19,7 @@
 
     <algorithm type = "LArMaster">
         <CRSettingsFile>PandoraSettings_Cosmic_ProtoDUNE.xml</CRSettingsFile>
-        <NuSettingsFile>PandoraSettings_TestBeam_ProtoDUNE.xml</NuSettingsFile>
+        <NuSettingsFile>PandoraSettings_TestBeam_ProtoDUNE_HD.xml</NuSettingsFile>
         <SlicingSettingsFile>PandoraSettings_Slicing_ProtoDUNE.xml</SlicingSettingsFile>
         <StitchingTools>
             <tool type = "LArStitchingCosmicRayMerging"><ThreeDStitchingMode>true</ThreeDStitchingMode></tool>
@@ -49,8 +49,15 @@
         <VisualizeOverallRecoStatus>false</VisualizeOverallRecoStatus>
     </algorithm>
 
-    <algorithm type = "LArVisualMonitoring">
-        <ShowCurrentPfos>true</ShowCurrentPfos>
-        <ShowDetector>true</ShowDetector>
+    <algorithm type = "LArTestBeamEventValidation">
+        <CaloHitListName>CaloHitList2D</CaloHitListName>
+        <MCParticleListName>Input</MCParticleListName>
+        <PfoListName>RecreatedPfos</PfoListName>
+        <PrintAllToScreen>false</PrintAllToScreen>
+        <PrintMatchingToScreen>false</PrintMatchingToScreen>
+        <WriteToTree>true</WriteToTree>
+        <OutputTree>Validation</OutputTree>
+        <OutputFile>Validation.root</OutputFile>
     </algorithm>
+
 </pandora>
